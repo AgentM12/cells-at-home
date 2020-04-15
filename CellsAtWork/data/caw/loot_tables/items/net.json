@@ -1,0 +1,37 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_name",
+              "name": {
+                "text": "Net",
+                "italic": false
+              }
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "text": "Slow your enemies down with this net.",
+                  "color": "gray",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "set_nbt",
+              "tag": "{CAW_ID:\"net\", CustomPotionEffects:[{Id:2,Amplifier:3,Duration:600,Ambient:1b}], CustomPotionColor:4768244}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
