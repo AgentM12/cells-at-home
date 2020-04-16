@@ -1,1 +1,0 @@
-give @s minecraft:diamond_sword{CAW_ID:"weapon",Unbreakable:1b}
