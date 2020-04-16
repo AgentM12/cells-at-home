@@ -1,0 +1,1 @@
+execute as @a[tag=red_cell] at @s if score @s delivery_timer matches 1.. run scoreboard players remove @s delivery_timer 1

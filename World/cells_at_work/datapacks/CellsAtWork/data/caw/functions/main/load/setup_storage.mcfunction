@@ -1,0 +1,1 @@
+data merge storage caw:text {Arrows:["⬉","⬆","⬈","➡","⬊","⬇","⬋","⬅"]}

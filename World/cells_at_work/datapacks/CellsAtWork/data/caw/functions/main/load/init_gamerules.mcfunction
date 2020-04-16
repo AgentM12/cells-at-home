@@ -1,0 +1,30 @@
+# All relevant gamerules.
+
+gamerule announceAdvancements false
+gamerule commandBlockOutput false
+gamerule disableRaids true
+gamerule doDaylightCycle false
+gamerule doEntityDrops true
+gamerule doFireTick false
+gamerule doImmediateRespawn true
+gamerule doInsomnia false
+gamerule doLimitedCrafting true
+gamerule doMobLoot true
+gamerule doMobSpawning false
+gamerule doPatrolSpawning false
+gamerule doTileDrops true
+gamerule doTraderSpawning false
+gamerule doWeatherCycle false
+gamerule drowningDamage false
+gamerule fallDamage false
+gamerule fireDamage false
+gamerule keepInventory false
+gamerule logAdminCommands false
+gamerule maxCommandChainLength 65536
+gamerule mobGriefing false
+gamerule naturalRegeneration false
+gamerule randomTickSpeed 0
+gamerule sendCommandFeedback true
+gamerule showDeathMessages false
+gamerule spawnRadius 0
+gamerule spectatorsGenerateChunks false

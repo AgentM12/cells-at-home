@@ -1,0 +1,1 @@
+summon minecraft:villager ~ ~ ~ {CustomName:'"Cell"',CustomNameVisible:1b,Tags:["cell"]}
