@@ -7,4 +7,4 @@ execute unless entity @e[type=armor_stand,tag=respawn_lobby_marker] run scoreboa
 
 execute if score $Lobby missing_req matches 1 run tellraw @a ["",{"text":"[ERROR] The game is missing a Lobby Marker!","color":"red"}]
 execute if score $Origin missing_req matches 1 run tellraw @a ["",{"text":"[ERROR] The game is missing a Game Origin!","color":"red"}]
-execute if score $RespawnLobby missing_req matches 1 run tellraw @a ["",{"text":"[ERROR] The game is missing a Respawn Lobby Marker","color":"red"}]
+execute if score $RespawnLobby missing_req matches 1 run tellraw @a ["",{"text":"[ERROR] The game is missing a Respawn Lobby Marker!","color":"red"}]
