@@ -1,0 +1,2 @@
+execute unless score $GLOBAL_SETTING net_cooldown matches 0.. run scoreboard players set $GLOBAL_SETTING net_cooldown 0
+execute unless score $GLOBAL_SETTING net_cooldown matches ..12000 run scoreboard players set $GLOBAL_SETTING net_cooldown 12000

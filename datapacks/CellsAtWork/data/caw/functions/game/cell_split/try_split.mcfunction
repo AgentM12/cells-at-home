@@ -1,3 +1,8 @@
-# Roll a d20, if we find a natural 20 (that is it matches 0) we will split the cell
-execute store result score $GLOBAL random run loot spawn ~ -1 ~ loot caw:rng/d20
-execute if score $GLOBAL random matches 0 run function caw:game/cell_split/split
+
+# lcg.random(1, MAX) # inclusive
+scoreboard players set $rng_in math 1
+scoreboard players operation $rng_in1 math = $GLOBAL_SETTING split_rng_bound
+function caw:random/range_lcg
+
+# if 1 then split
+execute if score $rng_out math matches 1 run function caw:game/cell_split/split

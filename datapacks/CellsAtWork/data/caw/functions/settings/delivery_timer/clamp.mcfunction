@@ -1,0 +1,2 @@
+execute unless score $GLOBAL_SETTING delivery_timer matches 0.. run scoreboard players set $GLOBAL_SETTING delivery_timer 0
+execute unless score $GLOBAL_SETTING delivery_timer matches ..600 run scoreboard players set $GLOBAL_SETTING delivery_timer 12000
