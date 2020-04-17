@@ -5,10 +5,12 @@ scoreboard players set $NEG_ONE constant -1
 scoreboard players set $GLOBAL_TPS constant 20
 
 # Initialize settings
-execute unless score $GLOBAL_SETTING delivery_timer matches 0..2147483647 run scoreboard players set $GLOBAL_SETTING delivery_timer 60
-execute unless score $GLOBAL_SETTING net_cooldown matches 0..2147483647 run scoreboard players set $GLOBAL_SETTING net_cooldown 600
 execute unless score $GLOBAL_SETTING target_progress matches 0..2147483647 run scoreboard players set $GLOBAL_SETTING target_progress 20
+
+execute unless score $GLOBAL_SETTING delivery_timer matches 0..2147483647 run scoreboard players set $GLOBAL_SETTING delivery_timer 120
 execute unless score $GLOBAL_SETTING respawn_timer_s matches 0..2147483647 run scoreboard players set $GLOBAL_SETTING respawn_timer_s 10
+execute unless score $GLOBAL_SETTING net_cooldown matches 0..2147483647 run scoreboard players set $GLOBAL_SETTING net_cooldown 600
+
 execute unless score $GLOBAL_SETTING split_rng_bound matches 1..2147483647 run scoreboard players set $GLOBAL_SETTING split_rng_bound 20
 
 # Initialize variables
