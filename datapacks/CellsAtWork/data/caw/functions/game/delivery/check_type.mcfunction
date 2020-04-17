@@ -1,6 +1,8 @@
+# Try to make a delivery based on the delivery type and count
 execute if score @s[tag=!delivery_made] delivery_type matches 1 if score @s has_sandwich >= @s delivery_count run function caw:game/delivery/sandwich
 execute if score @s[tag=!delivery_made] delivery_type matches 2 if score @s has_oxygen >= @s delivery_count run function caw:game/delivery/oxygen
 
+# If delivery failed, show why it failed.
 execute if score @s[tag=!delivery_made] delivery_type matches 1 run data merge storage caw:text {DeliveryType:"sandwich"}
 execute if score @s[tag=!delivery_made] delivery_type matches 2 run data merge storage caw:text {DeliveryType:"oxygen"}
 
