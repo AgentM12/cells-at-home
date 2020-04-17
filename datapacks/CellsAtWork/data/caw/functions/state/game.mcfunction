@@ -5,7 +5,7 @@ function caw:game/rejoin/check_disconnected
 ### PRE ###
 function caw:kill/banned_items
 execute as @a[tag=player] at @s run function caw:limit/limit_items
-execute as @a[tag=player,scores={timeSinceDeath=0}] at @s run function caw:game/spread_around_origin
+function caw:game/respawn/tick
 
 # clean players
 gamemode adventure @a[gamemode=survival]

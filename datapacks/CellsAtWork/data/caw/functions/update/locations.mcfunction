@@ -21,4 +21,4 @@ execute if entity @s[y_rotation=-67.5..-22.5] run function caw:update/locator/fa
 execute if score @s delivery_type matches 1 run data merge storage caw:text {"NutrientType":"sandwich"}
 execute if score @s delivery_type matches 2 run data merge storage caw:text {"NutrientType":"oxygen"}
 
-title @s actionbar [{"text":"Deliver ","color":"yellow"},{"nbt":"NutrientType","storage":"caw:text","color":"green","bold":"true"},{"text":" ("},{"text":"×","color":"green"},{"score":{"objective":"delivery_count","name":"@s"},"color":"green"},{"text":") in "},{"score":{"objective":"delivery_timer","name":"@s"}},{"text":"s ["},{"nbt":"Direction","storage":"caw:text","color":"green","bold":true,"interpret":true},{"text":"]"}]
+title @s[tag=!respawning] actionbar [{"text":"Deliver ","color":"yellow"},{"nbt":"NutrientType","storage":"caw:text","color":"green","bold":"true"},{"text":" ("},{"text":"×","color":"green"},{"score":{"objective":"delivery_count","name":"@s"},"color":"green"},{"text":") in "},{"score":{"objective":"delivery_timer","name":"@s"}},{"text":"s ["},{"nbt":"Direction","storage":"caw:text","color":"green","bold":true,"interpret":true},{"text":"]"}]
