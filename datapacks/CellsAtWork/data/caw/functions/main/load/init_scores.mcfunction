@@ -8,6 +8,7 @@ scoreboard objectives add target_progress dummy "Progress"
 scoreboard objectives add timer dummy "General Timer"
 scoreboard objectives add delivery_timer dummy "Delivery Timer"
 scoreboard objectives add timeSinceDeath minecraft.custom:minecraft.time_since_death "Time Since Death"
+scoreboard objectives add respawnCountdown dummy "Respawn Countdown"
 
 # Boolean
 scoreboard objectives add has_sandwich dummy "Has a Sandwich"
@@ -33,6 +34,7 @@ scoreboard objectives add gamestate dummy "Game State"
 scoreboard objectives add missing_req dummy "Missing Requirement"
 scoreboard objectives add pos_x dummy "Pos X"
 scoreboard objectives add pos_z dummy "Pos Z"
+scoreboard objectives add constants dummy "Constants"
 
 # Auto
 scoreboard objectives add food food "Food"

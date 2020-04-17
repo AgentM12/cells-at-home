@@ -1,0 +1,2 @@
+function caw:setblock/oak_wall_sign
+data merge block ~ ~ ~ {Color:"blue",Text2:'{"clickEvent":{"action":"run_command","value":"/function caw:give/settings_book"},"text":"CLICK FOR"}',Text3:'{"text":"SETTINGS"}'}
