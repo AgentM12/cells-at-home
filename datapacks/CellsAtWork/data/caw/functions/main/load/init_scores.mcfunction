@@ -25,6 +25,8 @@ scoreboard objectives add delivery_type dummy "Delivery Type"
 scoreboard objectives add delivery_count dummy "Delivery Count"
 scoreboard objectives add deliveries_made dummy "Total Deliveries Made"
 
+scoreboard objectives add nutrients dummy "Nutrient Count"
+
 # Internal
 scoreboard objectives add count dummy "Count"
 scoreboard objectives add gamestate dummy "Game State"

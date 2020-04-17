@@ -1,1 +1,1 @@
-summon minecraft:villager ~ ~ ~ {CustomName:'"Cell"',CustomNameVisible:1b,Tags:["cell"]}
+summon minecraft:villager ~ ~ ~ {CustomName:'"Cell"',CustomNameVisible:1b,Tags:["cell"],VillagerData:{level:5,profession:"minecraft:nitwit",type:"minecraft:plains"}}
