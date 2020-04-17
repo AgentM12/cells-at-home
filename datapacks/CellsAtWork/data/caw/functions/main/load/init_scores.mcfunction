@@ -27,6 +27,7 @@ scoreboard objectives add delivery_count dummy "Delivery Count"
 scoreboard objectives add deliveries_made dummy "Total Deliveries Made"
 
 scoreboard objectives add nutrients dummy "Nutrient Count"
+scoreboard objectives add age dummy "Age"
 
 # Internal
 scoreboard objectives add count dummy "Count"
@@ -35,6 +36,7 @@ scoreboard objectives add missing_req dummy "Missing Requirement"
 scoreboard objectives add pos_x dummy "Pos X"
 scoreboard objectives add pos_z dummy "Pos Z"
 scoreboard objectives add constants dummy "Constants"
+scoreboard objectives add random dummy "Random"
 
 # Auto
 scoreboard objectives add food food "Food"

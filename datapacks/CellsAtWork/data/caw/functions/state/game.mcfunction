@@ -8,6 +8,9 @@ function caw:game/respawn/tick
 function caw:kill/banned_items
 execute as @a[tag=player] at @s run function caw:limit/limit_items
 
+# Check villager age
+execute as @e[type=villager,tag=cell] at @s store result score @s age run data get entity @s Age
+
 # clean players
 gamemode adventure @a[gamemode=survival]
 execute as @a[gamemode=adventure,tag=!player] at @s run function caw:gamemode/spectator
