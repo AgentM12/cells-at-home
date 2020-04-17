@@ -26,8 +26,8 @@ clear @a[tag=player] minecraft:glass_bottle
 
 ## Game Over Conditions ##
 
-# Less than 5 villagers is game over for bloodcells.
-# 
+execute store result score $TotalCells count if entity @e[type=villager,tag=cell]
+execute if score $TotalCells count matches ..4 run function caw:game/over/too_little_cells
 
 # timers
 scoreboard players remove $Second timer 1
