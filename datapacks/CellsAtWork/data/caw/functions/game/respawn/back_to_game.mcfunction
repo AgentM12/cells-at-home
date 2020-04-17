@@ -1,5 +1,5 @@
 # Clear the respawning stuff from the player
-scoreboard players reset @s respawnCountdown
+scoreboard players reset @s respawn_timer_s
 tag @s remove respawning
 effect clear @s weakness
 

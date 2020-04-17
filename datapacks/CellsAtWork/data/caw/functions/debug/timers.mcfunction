@@ -1,0 +1,1 @@
+scoreboard players operation $SecondTimer debug_display = $Second timer

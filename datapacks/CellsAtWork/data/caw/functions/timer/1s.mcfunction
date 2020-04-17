@@ -1,3 +1,5 @@
+function caw:game/cell_split/split_timer
+
 function caw:update/delivery_timer
 
 function caw:update/cell_locations

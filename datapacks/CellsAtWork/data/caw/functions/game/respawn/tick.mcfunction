@@ -5,4 +5,4 @@ execute as @a[tag=player,scores={timeSinceDeath=0}] run function caw:game/respaw
 execute as @a[tag=respawning] run function caw:game/respawn/countdown
 
 # Respawn the players, for which the countdown has finished
-execute as @a[tag=respawning,scores={respawnCountdown=..0}] run function caw:game/respawn/back_to_game
+execute as @a[tag=respawning,scores={respawn_timer_s=..0}] run function caw:game/respawn/back_to_game
