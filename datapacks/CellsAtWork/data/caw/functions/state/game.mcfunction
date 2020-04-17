@@ -2,10 +2,11 @@
 # Rejoin handler
 function caw:game/rejoin/check_disconnected
 
+function caw:game/respawn/tick
+
 ### PRE ###
 function caw:kill/banned_items
 execute as @a[tag=player] at @s run function caw:limit/limit_items
-function caw:game/respawn/tick
 
 # clean players
 gamemode adventure @a[gamemode=survival]
