@@ -15,3 +15,4 @@ execute as @e[type=villager,tag=cell,distance=..2] at @s run function caw:game/s
 
 # Initialize 1 target cell per red blood cell
 execute as @a[tag=red_cell] at @s run function caw:game/target/assign_target
+
