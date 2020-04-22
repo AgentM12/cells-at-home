@@ -12,6 +12,9 @@ tag @a remove respawning
 # kills
 function caw:kill/variable_map_objects
 
+# Initialize Map Event Data
+function caw:game/init/map_event_data
+
 # The game ID. used to determine if a player can rejoin an already started game or not. (anti-cheat)
 scoreboard players add $GLOBAL game_id 1
 scoreboard players operation @a[tag=player] game_id = $GLOBAL game_id

@@ -1,0 +1,1 @@
+setblock 269 74 -205 minecraft:redstone_block
