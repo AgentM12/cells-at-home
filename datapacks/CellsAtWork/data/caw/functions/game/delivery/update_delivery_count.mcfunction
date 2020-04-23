@@ -15,6 +15,7 @@ scoreboard players operation $Exponential_Value delivery_count /= $One_Thousand 
 # Calculate the $Linear_Value
 scoreboard players operation $Linear_Value delivery_count = $Cell_Count delivery_count
 scoreboard players operation $Linear_Value delivery_count *= $Linear_Factor delivery_count
+scoreboard players operation $Linear_Value delivery_count /= $Ten constant
 
 # Calculate the new delivery_count
 scoreboard players operation @s delivery_count = $Constant_Factor delivery_count

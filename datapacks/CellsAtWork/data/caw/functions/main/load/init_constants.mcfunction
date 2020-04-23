@@ -4,6 +4,7 @@ scoreboard players set $LCG constant 1103515245
 scoreboard players set $NEG_ONE constant -1
 scoreboard players set $GLOBAL_TPS constant 20
 scoreboard players set $One_Thousand constant 1000
+scoreboard players set $Ten constant 10
 
 # Initialize settings
 execute unless score $GLOBAL_SETTING target_progress matches 0..2147483647 run scoreboard players set $GLOBAL_SETTING target_progress 20
@@ -15,8 +16,8 @@ execute unless score $GLOBAL_SETTING net_cooldown matches 0..2147483647 run scor
 execute unless score $GLOBAL_SETTING split_rng_bound matches 1..2147483647 run scoreboard players set $GLOBAL_SETTING split_rng_bound 20
 
 execute unless score $Exponential_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Exponential_Factor delivery_count 0
-execute unless score $Linear_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Linear_Factor delivery_count 1
-execute unless score $Constant_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Constant_Factor delivery_count -8
+execute unless score $Linear_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Linear_Factor delivery_count 10
+execute unless score $Constant_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Constant_Factor delivery_count -9
 execute unless score $Minimum delivery_count matches 1..2147483647 run scoreboard players set $Minimum delivery_count 1
 
 execute unless score $Start_Count cell_count matches 1.. run scoreboard players set $Start_Count cell_count 10
