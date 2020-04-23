@@ -10,6 +10,6 @@ execute store result bossbar caw:bc_target value run scoreboard players get $Cel
 
 function caw:game/target/change_target
 
-function caw:game/delivery/increase_delivery_count
+function caw:game/delivery/update_delivery_count
 
 tag @s add delivery_made

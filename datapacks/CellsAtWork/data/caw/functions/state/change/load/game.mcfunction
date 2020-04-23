@@ -39,6 +39,9 @@ execute as @e[type=armor_stand,tag=game_origin,limit=1] at @s run function caw:g
 scoreboard players operation @a[tag=red_cell] delivery_timer = $GLOBAL_SETTING delivery_timer
 scoreboard players set $Second timer 20
 
+# Initialize delivery_count
+function caw:game/delivery/update_delivery_count
+
 # Initialize targets
 execute store result bossbar caw:bc_target max run scoreboard players get $GLOBAL_SETTING target_progress
 execute store result bossbar caw:bc_target value run scoreboard players get $Cells target_progress
