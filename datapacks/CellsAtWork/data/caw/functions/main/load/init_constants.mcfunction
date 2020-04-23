@@ -19,6 +19,8 @@ execute unless score $Linear_Factor delivery_count matches -2147483648..21474836
 execute unless score $Constant_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Constant_Factor delivery_count -8
 execute unless score $Minimum delivery_count matches 1..2147483647 run scoreboard players set $Minimum delivery_count 1
 
+execute unless score $Start_Count cell_count matches 1.. run scoreboard players set $Start_Count cell_count 10
+
 # Initialize variables
 execute unless score $State gamestate matches -2147483648..2147483647 run scoreboard players set $State gamestate 0
 execute unless score $Change gamestate matches -2147483648..2147483647 run scoreboard players set $Change gamestate 0
