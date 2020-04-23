@@ -12,6 +12,7 @@ scoreboard objectives add respawn_timer_s dummy "Respawn Timer Seconds"
 
 # Boolean
 scoreboard objectives add has_sandwich dummy "Has a Sandwich"
+scoreboard objectives add has_oxygen dummy "Has Oxygen"
 scoreboard objectives add has_weapon dummy "Has a Weapon"
 scoreboard objectives add has_net dummy "Has a Net"
 scoreboard objectives add has_map dummy "Has a Map"
@@ -39,6 +40,7 @@ scoreboard objectives add constant dummy "Constant"
 scoreboard objectives add split_rng_bound dummy "Split RNG bound"
 scoreboard objectives add cell_count dummy "Cell Count"
 scoreboard objectives add sandwich_limit dummy "Sandwich Carry Limit"
+scoreboard objectives add oxygen_limit dummy "Oxygen Carry Limit"
 
 scoreboard objectives add debug dummy "Debug"
 scoreboard objectives add debug_display dummy "Debug Display"
