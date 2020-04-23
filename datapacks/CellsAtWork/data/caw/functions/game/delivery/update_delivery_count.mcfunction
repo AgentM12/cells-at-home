@@ -3,8 +3,7 @@
 # $Exponential_Factor / 1000 * x^2 + $Linear_Factor / 10 * x + $Constant_Factor
 
 # Count the Cells
-scoreboard players set $Cell_Count delivery_count 0
-execute as @e[tag=cell] run scoreboard players add $Cell_Count delivery_count 1
+execute store result score $Cell_Count delivery_count if entity @e[type=villager,tag=cell]
 
 # Calculate the $Exponential_Value
 scoreboard players operation $Exponential_Value delivery_count = $Cell_Count delivery_count
