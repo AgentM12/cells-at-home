@@ -10,7 +10,6 @@ execute store result bossbar caw:bc_target value run scoreboard players get $Cel
 
 function caw:game/target/change_target
 
-# Algorithm to determine how many nutrients are required next
-scoreboard players add @s delivery_count 1
+function caw:game/delivery/update_delivery_count
 
 tag @s add delivery_made
