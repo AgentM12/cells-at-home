@@ -1,6 +1,6 @@
 # If the total number of cells is x
 # Then the new delivery_count will be calcuated as
-# $Exponential_Factor / 1000 * x^2 + $Linear_Factor * x + $Constant_Factor
+# $Exponential_Factor / 1000 * x^2 + $Linear_Factor / 10 * x + $Constant_Factor
 
 # Count the Cells
 scoreboard players set $Cell_Count delivery_count 0
@@ -24,3 +24,5 @@ scoreboard players operation @s delivery_count += $Exponential_Value delivery_co
 
 # Make sure the delivery_count is at least $Minimum
 scoreboard players operation @s delivery_count > $Minimum delivery_count
+
+function caw:game/delivery/update_carry_limit

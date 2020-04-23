@@ -38,6 +38,7 @@ scoreboard objectives add pos_z dummy "Pos Z"
 scoreboard objectives add constant dummy "Constant"
 scoreboard objectives add split_rng_bound dummy "Split RNG bound"
 scoreboard objectives add cell_count dummy "Cell Count"
+scoreboard objectives add sandwich_limit dummy "Sandwich Carry Limit"
 
 scoreboard objectives add debug dummy "Debug"
 scoreboard objectives add debug_display dummy "Debug Display"

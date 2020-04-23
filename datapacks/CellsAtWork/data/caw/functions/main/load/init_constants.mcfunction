@@ -15,6 +15,8 @@ execute unless score $GLOBAL_SETTING net_cooldown matches 0..2147483647 run scor
 
 execute unless score $GLOBAL_SETTING split_rng_bound matches 1..2147483647 run scoreboard players set $GLOBAL_SETTING split_rng_bound 20
 
+execute unless score $Delivery_Factor sandwich_limit matches 1.. run scoreboard players set $Delivery_Factor sandwich_limit 15
+
 execute unless score $Exponential_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Exponential_Factor delivery_count 0
 execute unless score $Linear_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Linear_Factor delivery_count 10
 execute unless score $Constant_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Constant_Factor delivery_count -9
