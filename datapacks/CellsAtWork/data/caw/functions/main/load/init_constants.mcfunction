@@ -17,6 +17,7 @@ execute unless score $GLOBAL_SETTING split_rng_bound matches 1..2147483647 run s
 execute unless score $Exponential_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Exponential_Factor delivery_count 0
 execute unless score $Linear_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Linear_Factor delivery_count 1
 execute unless score $Constant_Factor delivery_count matches -2147483648..2147483647 run scoreboard players set $Constant_Factor delivery_count -8
+execute unless score $Minimum delivery_count matches 1..2147483647 run scoreboard players set $Minimum delivery_count 1
 
 # Initialize variables
 execute unless score $State gamestate matches -2147483648..2147483647 run scoreboard players set $State gamestate 0

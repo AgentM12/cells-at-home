@@ -20,3 +20,6 @@ scoreboard players operation $Linear_Value delivery_count *= $Linear_Factor deli
 scoreboard players operation @s delivery_count = $Constant_Factor delivery_count
 scoreboard players operation @s delivery_count += $Linear_Value delivery_count
 scoreboard players operation @s delivery_count += $Exponential_Value delivery_count
+
+# Make sure the delivery_count is at least $Minimum
+scoreboard players operation @s delivery_count > $Minimum delivery_count
