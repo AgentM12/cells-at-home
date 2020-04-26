@@ -1,0 +1,42 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:zombie_spawn_egg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_name",
+              "name": {
+                "text": "Spawn Pathogen",
+                "italic": false
+              }
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "text": "Right-Click on the ground to",
+                  "italic": false,
+                  "color": "gray"
+                },
+                {
+                  "text": "Spawn reinforcement pathogens!",
+                  "italic": false,
+                  "color": "gray"
+                }
+              ]
+            },
+            {
+              "function": "set_nbt",
+              "tag": "{CAW_ID:\"spawn_pathogen\",CanPlaceOn:[\"#caw:pathogen_spawnable\"],HideFlags:127,EntityTag:{Team:\"pathogens\",CustomName:'\"Pathogen\"',HandItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b}],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:stone_button\",Count:1b}]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
