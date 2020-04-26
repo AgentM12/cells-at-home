@@ -32,7 +32,7 @@
             },
             {
               "function": "set_nbt",
-              "tag": "{CAW_ID:\"spawn_pathogen\",CanPlaceOn:[\"#caw:pathogen_spawnable\"],HideFlags:127}"
+              "tag": "{CAW_ID:\"spawn_pathogen\",CanPlaceOn:[\"#caw:pathogen_spawnable\"],HideFlags:127,EntityTag:{ArmorItems:[{},{},{},{id:\"minecraft:stone_button\",Count:1b}]}}"
             }
           ]
         }
