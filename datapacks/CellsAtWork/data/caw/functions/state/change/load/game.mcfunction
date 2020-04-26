@@ -40,7 +40,7 @@ scoreboard players operation @a[tag=red_cell] delivery_timer = $GLOBAL_SETTING d
 scoreboard players set $Second timer 20
 
 # Initialize delivery_count
-function caw:game/delivery/update_delivery_count
+execute as @a[tag=player] at @s run function caw:game/delivery/update_delivery_count
 
 # Initialize targets
 execute store result bossbar caw:bc_target max run scoreboard players get $GLOBAL_SETTING target_progress
