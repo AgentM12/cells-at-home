@@ -14,10 +14,15 @@ execute as @a[tag=player] at @s run function caw:limit/limit_items
 # Check villager age
 execute as @e[type=villager,tag=cell] at @s store result score @s age run data get entity @s Age
 
+execute as @e[type=villager,tag=cell] at @s run effect give @s minecraft:slowness 1 1 true
+#execute as @e[type=zombie_villager,team=!pathogens] at @s run function caw:game/fix_burning
+
+
 # clean players
 gamemode adventure @a[gamemode=survival]
 execute as @a[gamemode=adventure,tag=!player] at @s run function caw:gamemode/spectator
 
+kill @e[type=experience_orb,tag=!imp]
 xp set @a[tag=player] 0 levels
 xp set @a[tag=player] 0 points
 
