@@ -1,2 +1,1 @@
 loot give @s loot caw:items/sandwich
-#give @s minecraft:bread{CAW_ID:"sandwich",display:{Name:'{"text":"Sandwich","italic":false}',Lore:['{"text":"Nutricious! Better deliver these quickly!","italic":false,"color":"gray"}']}}
