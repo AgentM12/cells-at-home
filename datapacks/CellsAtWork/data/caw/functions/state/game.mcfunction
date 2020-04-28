@@ -33,6 +33,7 @@ xp set @a[tag=player] 0 points
 effect give @a[tag=player,tag=!white_cell] minecraft:saturation 20 100 true
 effect give @a[tag=red_cell] minecraft:weakness 1 20 true
 effect clear @a[tag=pathogen] minecraft:slowness
+effect clear @a[tag=pathogen] minecraft:poison
 
 
 ## Game Over Conditions ##

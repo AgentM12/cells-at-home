@@ -27,7 +27,7 @@
             },
             {
               "function": "set_nbt",
-              "tag": "{CAW_ID:\"spawn_pathogen\",Potion:\"poison\"}"
+              "tag": "{CAW_ID:\"spawn_pathogen\",Potion:\"poison\",HideFlags:127}"
             }
           ]
         }
