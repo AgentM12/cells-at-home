@@ -16,6 +16,7 @@ scoreboard objectives add has_oxygen dummy "Has Oxygen"
 scoreboard objectives add has_weapon dummy "Has a Weapon"
 scoreboard objectives add has_net dummy "Has a Net"
 scoreboard objectives add has_map dummy "Has a Map"
+scoreboard objectives add is_poisoned dummy "Is Poisoned"
 
 # IDs
 scoreboard objectives add game_id dummy "Game ID"

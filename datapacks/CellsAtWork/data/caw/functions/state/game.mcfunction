@@ -1,48 +1,59 @@
 
-# Rejoin handler
+### PRE-PRE ###
 function caw:game/rejoin/check_disconnected
-
 function caw:game/respawn/tick
-
-# Map Events
 function caw:map_events/conveyors/tick
+function caw:kill/banned_items
+
 
 ### PRE ###
-function caw:kill/banned_items
 execute as @a[tag=player] at @s run function caw:limit/limit_items
 
-# Check villager age
+# Store villager Age
 execute as @e[type=villager,tag=cell] at @s store result score @s age run data get entity @s Age
 
-execute as @e[type=villager,tag=cell] at @s run effect give @s minecraft:slowness 1 1 true
-#execute as @e[type=zombie_villager,team=!pathogens] at @s run function caw:game/fix_burning
+# Slow down all cells (including infected)
+execute as @e[type=villager] at @s run effect give @s minecraft:slowness 1 1 true
 
+# Infect cells that are poisoned
+execute as @e[type=villager,tag=cell] at @s store result score @s is_poisoned run effect clear @s minecraft:poison
+execute as @e[type=villager,tag=cell,scores={is_poisoned=1..}] at @s run function caw:game/infect/cell
 
-# clean players
+# Player fixes
 gamemode adventure @a[gamemode=survival]
 execute as @a[gamemode=adventure,tag=!player] at @s run function caw:gamemode/spectator
+clear @a[tag=player] minecraft:glass_bottle
 
+# Remove Experience
 kill @e[type=experience_orb,tag=!imp]
 xp set @a[tag=player] 0 levels
 xp set @a[tag=player] 0 points
 
+# Player Effects
 effect give @a[tag=player,tag=!white_cell] minecraft:saturation 20 100 true
 effect give @a[tag=red_cell] minecraft:weakness 1 20 true
 effect clear @a[tag=pathogen] minecraft:slowness
 
-clear @a[tag=player] minecraft:glass_bottle
 
 ## Game Over Conditions ##
 
+#--TODO HARDCODED GAME END CONDITION
 execute store result score $TotalCells count if entity @e[type=villager,tag=cell]
 execute if score $TotalCells count matches ..4 run function caw:game/over/too_little_cells
 
-# timers
+execute store result score $InfectedCells count if entity @e[type=villager,tag=infected_cell]
+execute if score $InfectedCells count matches 30.. run function caw:game/over/too_many_infected_cells
+
+## Timers ##
 scoreboard players remove $Second timer 1
 execute if score $Second timer matches ..0 run function caw:timer/1s
 
+## Cooldowns ##
 execute as @a[tag=pathogen,scores={net_cooldown=1..}] at @s run scoreboard players remove @s net_cooldown 1
+
+# Give required items
 execute as @a[tag=player] at @s run function caw:give/required_items
+
 
 ### MID ###
 execute as @a[tag=pathogen,scores={use_potion=1..}] at @s run scoreboard players operation @s net_cooldown = $GLOBAL_SETTING net_cooldown
@@ -54,12 +65,11 @@ execute as @a[scores={food=0}] at @s run kill @s
 execute as @a[tag=white_cell,scores={food=20}] at @s run effect give @s minecraft:hunger 1 50 true
 execute as @a[tag=white_cell] at @s run effect give @s hunger 1 5 true
 
-# Red cell locators
-#execute as @a[tag=red_cell]
 
 ### POST ###
-scoreboard players set @a[tag=pathogen] use_potion 0
 
+# Reset scores
+scoreboard players set @a[tag=pathogen] use_potion 0
 scoreboard players set @a[tag=player,scores={killed_red_cell=1..}] killed_red_cell 0
 scoreboard players set @a[tag=player,scores={kill_by_pathogen=1..}] kill_by_pathogen 0
 scoreboard players set @a[tag=player,scores={was_killed=1..}] was_killed 0
