@@ -33,6 +33,9 @@ execute unless score $GLOBAL game_id matches -2147483648.. run scoreboard player
 execute unless score $GLOBAL debug matches -2147483648.. run scoreboard players set $GLOBAL debug -1
 execute unless score $ENTITY_COUNTER debug matches -2147483648.. run scoreboard players set $ENTITY_COUNTER debug -1
 execute unless score $TIMERS debug matches -2147483648.. run scoreboard players set $TIMERS debug -1
+execute unless score $STATS debug matches -2147483648.. run scoreboard players set $STATS debug -1
+
+execute unless score $PROFILE_ID debug_data matches -2147483648.. run scoreboard players set $PROFILE_ID debug_data 0
 
 # Random
 execute unless score $LCG math matches -2147483648.. run function caw:random/uuid_reset

@@ -19,6 +19,7 @@ scoreboard objectives add has_map dummy "Has a Map"
 scoreboard objectives add is_poisoned dummy "Is Poisoned"
 
 # IDs
+scoreboard objectives add id dummy "ID"
 scoreboard objectives add game_id dummy "Game ID"
 scoreboard objectives add player_id dummy "Player ID"
 scoreboard objectives add delivery_id dummy "Delivery ID"
@@ -45,6 +46,7 @@ scoreboard objectives add oxygen_limit dummy "Oxygen Carry Limit"
 
 scoreboard objectives add debug dummy "Debug"
 scoreboard objectives add debug_display dummy "Debug Display"
+scoreboard objectives add debug_data dummy "Debug Data"
 
 # Auto
 scoreboard objectives add food food "Food"
