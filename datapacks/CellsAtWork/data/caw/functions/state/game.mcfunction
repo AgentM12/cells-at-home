@@ -9,6 +9,8 @@ function caw:kill/banned_items
 ### PRE ###
 execute as @a[tag=player] at @s run function caw:limit/limit_items
 
+execute as @a[tag=red_cell] at @s run function caw:game/target/check_alive
+
 # Store villager Age
 execute as @e[type=villager,tag=cell] at @s store result score @s age run data get entity @s Age
 
