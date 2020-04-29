@@ -1,4 +1,5 @@
-data modify storage caw:text GameOverWinner set value '{"text":"Pathogens Win!","color":"dark_purple"}'
-data modify storage caw:text GameOverReason set value '{"text":"There were less than 5 cells alive in the body... The pathogens won!","color":"light_purple"}'
+# 1 = body, 2 = infected
+scoreboard players set $GAME_OVER_WINNER id 2 
+scoreboard players set $GAME_OVER_REASON id 1
 
 function caw:game/end
