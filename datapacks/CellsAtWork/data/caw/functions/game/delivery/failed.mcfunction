@@ -10,4 +10,4 @@ tellraw @s "<Dendritic Cell> You failed to deliver the nutrients in time!"
 
 playsound minecraft:entity.villager.death neutral @a ~ ~ ~ 1 1 0
 
-scoreboard players set @s delivery_timer 60
+scoreboard players operation @s delivery_timer = $GLOBAL_SETTING delivery_timer
