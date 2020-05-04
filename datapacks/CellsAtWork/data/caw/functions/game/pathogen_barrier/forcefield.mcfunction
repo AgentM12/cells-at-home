@@ -7,6 +7,6 @@ tellraw @a[tag=affected_pathogen] ["",{"text":"Pathogens are not allowed inside 
 tp @a[tag=affected_pathogen] ^ ^ ^2
 
 # Teleport cells too
-tp @e[type=villager] ^ ^ ^2
+tp @e[distance=..1.5,type=villager] ^ ^ ^2
 
 tag @a remove affected_pathogen
