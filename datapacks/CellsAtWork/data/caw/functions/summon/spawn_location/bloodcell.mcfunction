@@ -1,0 +1,1 @@
+give @p minecraft:silverfish_spawn_egg{EntityTag:{Tags:["ph_bloodcell_spawn"]}}
