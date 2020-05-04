@@ -28,6 +28,9 @@ scoreboard players set @a[tag=player] player_id 0
 execute as @r[tag=player] at @s run function caw:game/init/player_ids
 execute as @a[tag=player] at @s run function caw:game/init/player
 
+# Remove the tag after teleportation.
+tag @e[type=armor_stand,tag=sl_used] remove sl_used
+
 scoreboard players set @a[tag=red_cell] delivery_count 1
 scoreboard players set @a[tag=red_cell] delivery_type 1
 scoreboard players set @a[tag=red_cell] deliveries_made 0

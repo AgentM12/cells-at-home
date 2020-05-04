@@ -1,0 +1,1 @@
+give @p minecraft:silverfish_spawn_egg{display:{Name:'["",{"text":"Place Bloodcell Spawn Location","italic":false}]'},EntityTag:{NoAI:1b,Tags:["ph_bloodcell_spawn"]}}

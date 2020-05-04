@@ -1,0 +1,1 @@
+execute if score @s has_net_prev_t > @s has_net run scoreboard players operation @s net_cooldown = $GLOBAL_SETTING net_cooldown

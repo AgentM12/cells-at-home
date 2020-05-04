@@ -68,14 +68,13 @@ execute if score $Second timer matches ..0 run function caw:timer/1s
 ## Cooldowns ##
 execute as @a[tag=pathogen,scores={net_cooldown=1..}] at @s run scoreboard players remove @s net_cooldown 1
 
-# Give required items
-execute as @a[tag=player] at @s run function caw:give/required_items
-
-
 ### MID ###
-execute as @a[tag=pathogen,scores={use_potion=1..}] at @s run scoreboard players operation @s net_cooldown = $GLOBAL_SETTING net_cooldown
+execute as @a[tag=pathogen,scores={use_potion=1..}] at @s run function caw:game/check_potion_used
 execute as @a[tag=player,tag=!red_cell,scores={has_sandwich=1..}] at @s run function caw:game/has_sandwich
 execute as @a[tag=red_cell,scores={villager_clicked=1..}] at @s run function caw:game/delivery/check_id
+
+# Give required items
+execute as @a[tag=player] at @s run function caw:give/required_items
 
 # White cell energy drain
 execute as @a[scores={food=0}] at @s run kill @s
@@ -84,6 +83,9 @@ execute as @a[tag=white_cell] at @s run effect give @s hunger 1 5 true
 
 
 ### POST ###
+
+# Set the previous used score
+execute as @a[tag=pathogen] at @s store result score @s has_net_prev_t run clear @s minecraft:splash_potion{CAW_ID:"net"} 0
 
 # Reset scores
 scoreboard players set @a[tag=pathogen] use_potion 0

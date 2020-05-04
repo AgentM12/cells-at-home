@@ -1,5 +1,6 @@
 # Debug before anything else.
 execute if score $GLOBAL debug matches 1 run function caw:debug/tick
+function caw:summon/spawn_location/all
 
 execute if score $State gamestate matches 0 if score $Change gamestate matches 0 run function caw:state/lobby
 execute if score $State gamestate matches 1 if score $Change gamestate matches 0 run function caw:state/game
