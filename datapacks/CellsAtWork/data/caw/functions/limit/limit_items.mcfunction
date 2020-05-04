@@ -9,4 +9,5 @@ execute if score @s[tag=red_cell] has_sandwich > @s sandwich_limit run function 
 execute if score @s[tag=red_cell] has_oxygen > @s oxygen_limit run function caw:limit/oxygen
 execute if score @s has_weapon matches 2.. run function caw:limit/weapon
 execute if score @s has_net matches 2.. run function caw:limit/net
+execute if score @s has_poison matches 2.. run function caw:limit/poison
 execute if score @s has_map matches 2.. run function caw:limit/map
