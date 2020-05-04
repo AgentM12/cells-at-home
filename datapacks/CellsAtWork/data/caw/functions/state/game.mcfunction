@@ -5,13 +5,16 @@ function caw:game/respawn/tick
 function caw:map_events/conveyors/tick
 function caw:kill/banned_items
 
-
 ### PRE ###
 execute as @a[tag=player] at @s run function caw:limit/limit_items
 
 execute as @a[tag=red_cell] at @s run function caw:game/target/check_alive
 
 execute as @e[type=minecraft:armor_stand,tag=anti_pathogen_barrier] at @s run function caw:game/pathogen_barrier/forcefield
+
+# At all players spawn a cloud to be used when the player dies.
+execute as @a[tag=player] at @s run function caw:game/death_particles/tracker
+execute as @a[tag=player,scores={timeSinceDeath=0}] at @s run function caw:game/death_particles/find_cloud
 
 # Store villager Age
 execute as @e[type=villager,tag=cell] at @s store result score @s age run data get entity @s Age

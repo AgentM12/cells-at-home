@@ -7,4 +7,5 @@ effect clear @s weakness
 title @s actionbar {"text":""}
 
 # Randomly spawn the player in the level
-function caw:game/spread_around_origin
+execute if entity @s[tag=pathogen] run function caw:game/spawn/pathogen
+execute if entity @s[tag=blood_cell] run function caw:game/spawn/bloodcell
