@@ -5,10 +5,6 @@ playsound minecraft:entity.player.levelup master @s ~ ~ ~ 1 2 0
 scoreboard players operation @s delivery_timer = $GLOBAL_SETTING delivery_timer
 scoreboard players add @s deliveries_made 1
 
-# Count cells for progress bar.
-scoreboard players add $Cells target_progress 1
-execute store result bossbar caw:bc_target value run scoreboard players get $Cells target_progress
-
 function caw:game/target/change_target
 
 function caw:game/delivery/update_delivery_count

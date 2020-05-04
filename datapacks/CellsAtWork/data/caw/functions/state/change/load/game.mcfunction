@@ -43,12 +43,4 @@ scoreboard players set $Second timer 20
 execute as @a[tag=player] at @s run function caw:game/delivery/update_delivery_count
 
 # Initialize targets
-execute store result bossbar caw:bc_target max run scoreboard players get $GLOBAL_SETTING target_progress
-execute store result bossbar caw:bc_target value run scoreboard players get $Cells target_progress
-bossbar set caw:bc_target players @a[tag=player]
-bossbar set caw:bc_target visible true
-
-execute store result bossbar caw:pg_target max run scoreboard players get $GLOBAL_SETTING target_progress
-execute store result bossbar caw:pg_target value run scoreboard players get $Pathogens target_progress
-bossbar set caw:pg_target players @a[tag=player]
-bossbar set caw:pg_target visible true
+function caw:main/load/setup_bossbars

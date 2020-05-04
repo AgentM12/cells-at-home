@@ -40,12 +40,24 @@ effect clear @a[tag=pathogen] minecraft:poison
 
 ## Game Over Conditions ##
 
-#--TODO HARDCODED GAME END CONDITION
+# Count cells
 execute store result score $TotalCells count if entity @e[type=villager,tag=cell]
-execute if score $TotalCells count matches ..4 run function caw:game/over/too_little_cells
-
 execute store result score $InfectedCells count if entity @e[type=villager,tag=infected_cell]
-execute if score $InfectedCells count matches 30.. run function caw:game/over/too_many_infected_cells
+
+# Too many cells -> body wins
+execute if score $TotalCells count >= $Cells_Target target_progress run function caw:game/over/too_many_cells
+
+# Too little cells -> virus wins
+execute if score $TotalCells count <= $Cells_Minimum target_progress run function caw:game/over/too_little_cells
+
+# Too many infected cells -> virus wins
+execute if score $InfectedCells count >= $Pathogens_Target target_progress run function caw:game/over/too_many_infected_cells
+
+# Update bossbars
+scoreboard players operation $TotalCells_Bossbar target_progress = $TotalCells count
+scoreboard players operation $TotalCells_Bossbar target_progress -= $Cells_Minimum target_progress
+execute store result bossbar caw:bc_target value run scoreboard players get $TotalCells_Bossbar target_progress
+execute store result bossbar caw:pg_target value run scoreboard players get $InfectedCells count
 
 ## Timers ##
 scoreboard players remove $Second timer 1
