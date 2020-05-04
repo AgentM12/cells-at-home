@@ -7,6 +7,9 @@ scoreboard players set $NEG_ONE constant -1
 
 #
 scoreboard players set $GLOBAL_TPS constant 20
+scoreboard players set $PUSH_SPEED constant 40
+scoreboard players operation $PUSH_SPEED_MIN_ONE constant = $PUSH_SPEED constant
+scoreboard players remove $PUSH_SPEED_MIN_ONE constant 1
 scoreboard players set $One_Thousand constant 1000
 scoreboard players set $Ten constant 10
 

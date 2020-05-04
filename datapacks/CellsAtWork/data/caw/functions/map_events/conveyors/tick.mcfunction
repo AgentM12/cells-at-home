@@ -3,7 +3,7 @@ scoreboard players remove $CONVEYOR timer 1
 
 # Modulo count every tick it moves
 scoreboard players operation $C_PUSH timer = $CONVEYOR timer
-scoreboard players operation $C_PUSH timer %= $GLOBAL_TPS constant
+scoreboard players operation $C_PUSH timer %= $PUSH_SPEED constant
 
 # Set the block and spawn the sandwich
 execute if score $C_PUSH timer matches 17 run function caw:map_events/conveyors/on/pre_conveyor1

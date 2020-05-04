@@ -18,6 +18,8 @@ scoreboard objectives add has_net dummy "Has a Net"
 scoreboard objectives add has_map dummy "Has a Map"
 scoreboard objectives add is_poisoned dummy "Is Poisoned"
 
+scoreboard objectives add has_net_prev_t dummy "Had a net last tick"
+
 # IDs
 scoreboard objectives add id dummy "ID"
 scoreboard objectives add game_id dummy "Game ID"
