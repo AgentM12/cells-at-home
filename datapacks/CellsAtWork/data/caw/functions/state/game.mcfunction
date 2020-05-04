@@ -67,7 +67,7 @@ execute if score $Second timer matches ..0 run function caw:timer/1s
 execute as @a[tag=pathogen,scores={net_cooldown=1..}] at @s run scoreboard players remove @s net_cooldown 1
 
 # Give required items
-function caw:give/potion/update_potion_count
+function caw:give/poison/update_poison_count
 execute as @a[tag=player] at @s run function caw:give/required_items
 
 

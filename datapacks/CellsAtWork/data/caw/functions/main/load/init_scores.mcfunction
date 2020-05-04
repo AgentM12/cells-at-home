@@ -32,8 +32,8 @@ scoreboard objectives add deliveries_made dummy "Total Deliveries Made"
 scoreboard objectives add nutrients dummy "Nutrient Count"
 scoreboard objectives add age dummy "Age"
 
-# Potions
-scoreboard objectives add potion_count dummy "Potion Count"
+# Poisons
+scoreboard objectives add poison_count dummy "Poison Count"
 
 # Internal
 scoreboard objectives add count dummy "Count"
