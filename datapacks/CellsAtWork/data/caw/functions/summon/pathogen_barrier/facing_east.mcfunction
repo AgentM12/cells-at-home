@@ -1,0 +1,1 @@
+summon minecraft:armor_stand ~ ~ ~ {Rotation:[-90f,0f,0f],Tags:["imp","anti_pathogen_barrier"],Invulnerable:1b,NoGravity:1b,Invisible:1b,Marker:1b}
