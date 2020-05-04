@@ -30,7 +30,7 @@ execute unless score $Minimum poison_count matches 1.. run scoreboard players se
 # Poisons
 execute unless score $Exponential_Factor poison_count matches -2147483648.. run scoreboard players set $Exponential_Factor delivery_count 0
 execute unless score $Linear_Factor delivery_count matches -2147483648.. run scoreboard players set $Linear_Factor delivery_count 10
-execute unless score $Constant_Factor delivery_count matches -2147483648.. run scoreboard players set $Constant_Factor delivery_count -9
+execute unless score $Constant_Factor delivery_count matches -2147483648.. run scoreboard players set $Constant_Factor delivery_count 5
 execute unless score $Minimum delivery_count matches 1.. run scoreboard players set $Minimum delivery_count 1
 
 # Splitting
