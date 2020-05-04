@@ -11,7 +11,9 @@ scoreboard players set $One_Thousand constant 1000
 scoreboard players set $Ten constant 10
 
 ### Initialize settings ###
-execute unless score $GLOBAL_SETTING target_progress matches 0.. run scoreboard players set $GLOBAL_SETTING target_progress 20
+execute unless score $Cells_Minimum target_progress matches 0.. run scoreboard players set $Cells_Minimum target_progress 5
+execute unless score $Cells_Target target_progress matches 0.. run scoreboard players set $Cells_Target target_progress 20
+execute unless score $Pathogens_Target target_progress matches 0.. run scoreboard players set $Pathogens_Target target_progress 20
 execute unless score $GLOBAL_SETTING respawn_timer_s matches 0.. run scoreboard players set $GLOBAL_SETTING respawn_timer_s 10
 execute unless score $GLOBAL_SETTING net_cooldown matches 0.. run scoreboard players set $GLOBAL_SETTING net_cooldown 600
 execute unless score $Start_Count cell_count matches 1.. run scoreboard players set $Start_Count cell_count 10
