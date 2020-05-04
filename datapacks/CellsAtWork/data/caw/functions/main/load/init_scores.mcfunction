@@ -15,10 +15,12 @@ scoreboard objectives add has_sandwich dummy "Has a Sandwich"
 scoreboard objectives add has_oxygen dummy "Has Oxygen"
 scoreboard objectives add has_weapon dummy "Has a Weapon"
 scoreboard objectives add has_net dummy "Has a Net"
+scoreboard objectives add has_poison dummy "Has Poison"
 scoreboard objectives add has_map dummy "Has a Map"
 scoreboard objectives add is_poisoned dummy "Is Poisoned"
 
 scoreboard objectives add has_net_prev_t dummy "Had a net last tick"
+scoreboard objectives add has_poison_prev dummy "Had poison last tick"
 
 # IDs
 scoreboard objectives add id dummy "ID"

@@ -12,6 +12,8 @@ scoreboard players set @s has_net 0
 scoreboard players set @s has_net_prev_t 0
 scoreboard players set @s timeSinceDeath 12000
 
+tag @s remove should_have_poison
+
 tag @s add disallow_multiple_spawns
 execute if entity @s[tag=pathogen] run function caw:game/spawn/pathogen
 execute if entity @s[tag=blood_cell] run function caw:game/spawn/bloodcell
