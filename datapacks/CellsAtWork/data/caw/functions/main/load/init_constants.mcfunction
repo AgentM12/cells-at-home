@@ -22,7 +22,13 @@ execute unless score $Start_Count cell_count matches 1.. run scoreboard players 
 execute unless score $GLOBAL_SETTING delivery_timer matches 0.. run scoreboard players set $GLOBAL_SETTING delivery_timer 120
 execute unless score $Delivery_Factor sandwich_limit matches 1.. run scoreboard players set $Delivery_Factor sandwich_limit 15
 
-execute unless score $Exponential_Factor delivery_count matches -2147483648.. run scoreboard players set $Exponential_Factor delivery_count 0
+execute unless score $Exponential_Factor potion_count matches -2147483648.. run scoreboard players set $Exponential_Factor potion_count 0
+execute unless score $Linear_Factor potion_count matches -2147483648.. run scoreboard players set $Linear_Factor potion_count 10
+execute unless score $Constant_Factor potion_count matches -2147483648.. run scoreboard players set $Constant_Factor potion_count -9
+execute unless score $Minimum potion_count matches 1.. run scoreboard players set $Minimum potion_count 1
+
+# Potions
+execute unless score $Exponential_Factor potion_count matches -2147483648.. run scoreboard players set $Exponential_Factor delivery_count 0
 execute unless score $Linear_Factor delivery_count matches -2147483648.. run scoreboard players set $Linear_Factor delivery_count 10
 execute unless score $Constant_Factor delivery_count matches -2147483648.. run scoreboard players set $Constant_Factor delivery_count -9
 execute unless score $Minimum delivery_count matches 1.. run scoreboard players set $Minimum delivery_count 1
