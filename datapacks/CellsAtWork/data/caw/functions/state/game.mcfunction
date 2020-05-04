@@ -77,6 +77,7 @@ execute as @a[tag=player,tag=!red_cell,scores={has_sandwich=1..}] at @s run func
 execute as @a[tag=red_cell,scores={villager_clicked=1..}] at @s run function caw:game/delivery/check_id
 
 # Give required items
+function caw:give/poison/update_poison_count
 execute as @a[tag=player] at @s run function caw:give/required_items
 
 # White cell energy drain
@@ -89,6 +90,7 @@ execute as @a[tag=white_cell] at @s run effect give @s hunger 1 5 true
 
 # Set the previous used score
 execute as @a[tag=pathogen] at @s store result score @s has_net_prev_t run clear @s minecraft:splash_potion{CAW_ID:"net"} 0
+execute as @a[tag=pathogen] at @s store result score @s has_poison_prev run clear @s minecraft:splash_potion{CAW_ID:"spawn_pathogen"} 0
 
 # Reset scores
 scoreboard players set @a[tag=pathogen] use_potion 0
