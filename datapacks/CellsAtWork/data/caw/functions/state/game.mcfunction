@@ -12,6 +12,14 @@ execute as @a[tag=red_cell] at @s run function caw:game/target/check_alive
 
 execute as @e[type=minecraft:armor_stand,tag=anti_pathogen_barrier] at @s run function caw:game/pathogen_barrier/forcefield
 
+# Damaged cells warn players.
+execute as @e[type=villager] at @s store result score @s pain_value run data get entity @s HurtByTimestamp
+execute as @e[type=villager,scores={pain_value=1..}] at @s run function caw:game/warn/cell_damaged
+
+# Player particles
+execute as @a[tag=red_cell] at @s run function caw:game/warn/red_cell
+execute as @a[tag=white_cell] at @s run function caw:game/warn/white_cell
+
 # At all players spawn a cloud to be used when the player dies.
 execute as @a[tag=player] at @s run function caw:game/death_particles/tracker
 execute as @a[tag=player,scores={timeSinceDeath=0}] at @s run function caw:game/death_particles/find_cloud
@@ -29,7 +37,8 @@ execute as @e[type=villager,tag=cell,scores={is_poisoned=1..}] at @s run functio
 # Player fixes
 gamemode adventure @a[gamemode=survival]
 execute as @a[gamemode=adventure,tag=!player] at @s run function caw:gamemode/spectator
-clear @a[tag=player] minecraft:glass_bottle
+execute as @a[tag=player] at @s store result score @s drank_coffee run clear @s minecraft:glass_bottle
+execute as @a[tag=player] at @s if score @s drank_coffee matches 1.. run effect clear @s slowness
 
 # Remove Experience
 kill @e[type=experience_orb,tag=!imp]
@@ -82,8 +91,8 @@ execute as @a[tag=player] at @s run function caw:give/required_items
 
 # White cell energy drain
 execute as @a[scores={food=0}] at @s run kill @s
-execute as @a[tag=white_cell,scores={food=20}] at @s run effect give @s minecraft:hunger 1 50 true
-execute as @a[tag=white_cell] at @s run effect give @s hunger 1 5 true
+execute as @a[tag=white_cell,scores={food=20}] at @s run effect give @s minecraft:hunger 1 30 true
+execute as @a[tag=white_cell] at @s run effect give @s hunger 1 3 true
 
 
 ### POST ###
@@ -98,3 +107,4 @@ scoreboard players set @a[tag=player,scores={killed_red_cell=1..}] killed_red_ce
 scoreboard players set @a[tag=player,scores={kill_by_pathogen=1..}] kill_by_pathogen 0
 scoreboard players set @a[tag=player,scores={was_killed=1..}] was_killed 0
 scoreboard players set @a[tag=player,scores={villager_clicked=1..}] villager_clicked 0
+scoreboard players set @a[tag=player,scores={drank_coffee=1..}] drank_coffee 0

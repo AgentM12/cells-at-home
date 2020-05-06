@@ -1,8 +1,8 @@
 
 ### Reset ###
-scoreboard players reset * score
+#scoreboard objectives setdisplay sidebar score
+#scoreboard players reset * score
 scoreboard players reset * age
-scoreboard objectives setdisplay sidebar score
 
 scoreboard players set $Cells target_progress 0
 scoreboard players set $Pathogens target_progress 0
@@ -14,6 +14,7 @@ function caw:kill/variable_map_objects
 
 # Initialize Map Event Data
 function caw:game/init/map_event_data
+function caw:game/init/coffee_refill
 
 # The game ID. used to determine if a player can rejoin an already started game or not. (anti-cheat)
 scoreboard players add $GLOBAL game_id 1

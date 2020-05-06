@@ -16,4 +16,8 @@ execute if score $Pathogens count matches ..0 run tellraw @s [{"text":"","color"
 execute if score $Pathogens count matches 4.. run tellraw @s [{"text":"","color":"red"},{"text":"Unable to start game: Too many "},{"text":"pathogens","color":"dark_purple"},{"text":" ("},{"color":"yellow","score":{"name":"$Pathogens","objective":"count"}},{"text":"), maximum is "},{"color":"yellow","text":"3"},{"text":"!"}]
 
 execute unless score $State gamestate matches 0 run tellraw @s [{"text":"","color":"red"},{"text":"Unable to start game: It has already started!"}]
-execute if score $State gamestate matches 0 if score $Players count matches 3..9 if score $Red_Cells count matches 1..3 if score $White_Cells count matches 1..3 if score $Pathogens count matches 1..3 run function caw:state/change/game
+
+scoreboard players set $CanStartGame count 0
+execute if score $State gamestate matches 0 if score $Players count matches 3..9 if score $Red_Cells count matches 1..3 if score $White_Cells count matches 1..3 if score $Pathogens count matches 1..3 run scoreboard players set $CanStartGame count 1
+execute if score $CanStartGame count matches 1 run function caw:state/change/game
+execute if score $CanStartGame count matches 0 run playsound minecraft:entity.villager.no master @a ~ ~ ~ 1 1 0
