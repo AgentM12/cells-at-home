@@ -27,7 +27,7 @@
             },
             {
               "function": "set_nbt",
-              "tag": "{CAW_ID:\"coffee\", CustomPotionEffects:[{Duration:300,Ambient:1b,Id:1,Amplifier:1}], CustomPotionColor:8078858, HideFlags:32767}"
+              "tag": "{CAW_ID:\"coffee\", CustomPotionEffects:[{Duration:300,Ambient:1b,Id:1,Amplifier:2}], CustomPotionColor:8078858, HideFlags:32767}"
             }
           ]
         }

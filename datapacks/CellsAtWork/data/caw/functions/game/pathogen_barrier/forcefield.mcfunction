@@ -5,6 +5,7 @@ tag @a[distance=..1.5,tag=pathogen] add affected_pathogen
 
 tellraw @a[tag=affected_pathogen] ["",{"text":"Pathogens are not allowed inside of the intestine!","color":"red"}]
 tp @a[tag=affected_pathogen] ^ ^ ^2
+playsound minecraft:entity.villager.no master @a[tag=affected_pathogen] ~ ~ ~ 1 1 0
 
 # Teleport cells too
 tp @e[distance=..1.5,type=villager] ^ ^ ^2

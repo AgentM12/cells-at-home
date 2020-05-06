@@ -1114,7 +1114,7 @@
          "color":"dark_blue",
          "clickEvent":{
             "action":"run_command",
-            "value":"/function caw:settings/debug/toggle/entity_counter"
+            "value":"/function caw:settings/debug/toggle_entities"
          }
       },
       {
@@ -1129,7 +1129,7 @@
          "color":"dark_blue",
          "clickEvent":{
             "action":"run_command",
-            "value":"/function caw:settings/debug/toggle/timers"
+            "value":"/function caw:settings/debug/toggle_timers"
          }
       },
       {
@@ -1143,7 +1143,7 @@
          "color":"dark_blue",
          "clickEvent":{
             "action":"run_command",
-            "value":"/function caw:settings/debug/toggle/statistics"
+            "value":"/function caw:settings/debug/toggle_statistics"
          }
       },
       {
