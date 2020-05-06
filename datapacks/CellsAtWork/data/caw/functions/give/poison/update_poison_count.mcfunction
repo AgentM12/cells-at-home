@@ -24,4 +24,4 @@ scoreboard players operation $poison_count poison_count += $Exponential_Value po
 # Make sure the delivery_count is at least $Minimum
 scoreboard players operation $poison_count poison_count > $Minimum poison_count
 
-execute as @a[tag=player,tag=!should_have_poison] run title @a actionbar ["",{"score":{"name":"$poison_count","objective":"poison_count"}},{"text":" nutrients required for next poison"}]
+execute as @s[tag=!should_have_poison] run title @s actionbar ["",{"score":{"name":"$poison_count","objective":"poison_count"}},{"text":" nutrients required for next poison"}]

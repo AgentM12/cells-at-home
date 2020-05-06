@@ -17,7 +17,7 @@ gamerule doTraderSpawning false
 gamerule doWeatherCycle false
 gamerule drowningDamage false
 gamerule fallDamage false
-gamerule fireDamage false
+gamerule fireDamage true
 gamerule keepInventory false
 gamerule logAdminCommands false
 gamerule maxCommandChainLength 65536
