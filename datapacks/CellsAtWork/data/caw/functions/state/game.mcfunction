@@ -23,6 +23,7 @@ execute as @a[tag=white_cell] at @s run function caw:game/warn/white_cell
 # At all players spawn a cloud to be used when the player dies.
 execute as @a[tag=player] at @s run function caw:game/death_particles/tracker
 execute as @a[tag=player,scores={timeSinceDeath=0}] at @s run function caw:game/death_particles/find_cloud
+execute as @a[nbt={ActiveEffects:[{Id:1b}]}] at @s run particle dust .75 .5 .25 1 ~ ~ ~ .5 1 .5 0 3 normal
 
 # Store villager Age
 execute as @e[type=villager,tag=cell] at @s store result score @s age run data get entity @s Age
