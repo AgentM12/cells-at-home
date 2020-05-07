@@ -23,6 +23,7 @@ execute as @a[tag=white_cell] at @s run function caw:game/warn/white_cell
 # At all players spawn a cloud to be used when the player dies.
 execute as @a[tag=player] at @s run function caw:game/death_particles/tracker
 execute as @a[tag=player,scores={timeSinceDeath=0}] at @s run function caw:game/death_particles/find_cloud
+execute as @a[nbt={ActiveEffects:[{Id:1b}]}] at @s run particle dust .75 .5 .25 1 ~ ~ ~ .5 1 .5 0 3 normal
 
 # Store villager Age
 execute as @e[type=villager,tag=cell] at @s store result score @s age run data get entity @s Age
@@ -37,8 +38,6 @@ execute as @e[type=villager,tag=cell,scores={is_poisoned=1..}] at @s run functio
 # Player fixes
 gamemode adventure @a[gamemode=survival]
 execute as @a[gamemode=adventure,tag=!player] at @s run function caw:gamemode/spectator
-execute as @a[tag=player] at @s store result score @s drank_coffee run clear @s minecraft:glass_bottle
-execute as @a[tag=player] at @s if score @s drank_coffee matches 1.. run effect clear @s slowness
 
 # Remove Experience
 kill @e[type=experience_orb,tag=!imp]
@@ -81,7 +80,7 @@ execute if score $Second timer matches ..0 run function caw:timer/1s
 execute as @a[tag=pathogen,scores={net_cooldown=1..}] at @s run scoreboard players remove @s net_cooldown 1
 
 ### MID ###
-execute as @a[tag=pathogen,scores={use_potion=1..}] at @s run function caw:game/check_potion_used
+execute as @a[scores={use_potion=1..}] at @s run function caw:game/check_potion_used
 execute as @a[tag=player,tag=!red_cell,scores={has_sandwich=1..}] at @s run function caw:game/has_sandwich
 execute as @a[tag=red_cell,scores={villager_clicked=1..}] at @s run function caw:game/delivery/check_id
 
@@ -100,11 +99,11 @@ execute as @a[tag=white_cell] at @s run effect give @s hunger 1 3 true
 # Set the previous used score
 execute as @a[tag=pathogen] at @s store result score @s has_net_prev_t run clear @s minecraft:splash_potion{CAW_ID:"net"} 0
 execute as @a[tag=pathogen] at @s store result score @s has_poison_prev run clear @s minecraft:splash_potion{CAW_ID:"spawn_pathogen"} 0
+execute as @a at @s store result score @s has_coffee_prev run clear @s minecraft:splash_potion{CAW_ID:"coffee"} 0
 
 # Reset scores
-scoreboard players set @a[tag=pathogen] use_potion 0
+scoreboard players set @a use_potion 0
 scoreboard players set @a[tag=player,scores={killed_red_cell=1..}] killed_red_cell 0
 scoreboard players set @a[tag=player,scores={kill_by_pathogen=1..}] kill_by_pathogen 0
 scoreboard players set @a[tag=player,scores={was_killed=1..}] was_killed 0
 scoreboard players set @a[tag=player,scores={villager_clicked=1..}] villager_clicked 0
-scoreboard players set @a[tag=player,scores={drank_coffee=1..}] drank_coffee 0
