@@ -86,7 +86,7 @@ execute as @a[tag=player,tag=!red_cell,scores={has_sandwich=1..}] at @s run func
 execute as @a[tag=red_cell,scores={villager_clicked=1..}] at @s run function caw:game/delivery/check_id
 
 # Give required items
-execute as @a[tag=pathogen] at @s run function caw:give/poison/update_poison_count
+function caw:give/poison/update_poison_count
 execute as @a[tag=player] at @s run function caw:give/required_items
 
 # White cell energy drain
