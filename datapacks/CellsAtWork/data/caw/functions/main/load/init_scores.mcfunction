@@ -18,11 +18,11 @@ scoreboard objectives add has_net dummy [{"text":"Has a Net","color":"dark_green
 scoreboard objectives add has_poison dummy [{"text":"Has Poison","color":"dark_green"}]
 scoreboard objectives add has_map dummy [{"text":"Has a Map","color":"dark_green"}]
 scoreboard objectives add has_coffee dummy [{"text":"Has Coffee","color":"dark_green"}]
-scoreboard objectives add drank_coffee dummy [{"text":"Drank Coffee","color":"dark_green"}]
 scoreboard objectives add is_poisoned dummy [{"text":"Is Poisoned","color":"dark_green"}]
 
 scoreboard objectives add has_net_prev_t dummy [{"text":"Had a net last tick","color":"dark_green"}]
 scoreboard objectives add has_poison_prev dummy [{"text":"Had poison last tick","color":"dark_green"}]
+scoreboard objectives add has_coffee_prev dummy [{"text":"Had a coffee last tick","color":"dark_green"}]
 
 # IDs
 scoreboard objectives add id dummy [{"text":"ID","color":"aqua"}]
