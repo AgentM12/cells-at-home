@@ -5,6 +5,7 @@ execute store result score @s pos_z run data get entity @s Pos[2]
 tag @s add self
 execute as @e[type=villager,tag=target_cell] at @s if score @s delivery_id = @a[tag=self,limit=1] player_id run scoreboard players operation @a[tag=self,limit=1] pos_x -= @s pos_x
 execute as @e[type=villager,tag=target_cell] at @s if score @s delivery_id = @a[tag=self,limit=1] player_id run scoreboard players operation @a[tag=self,limit=1] pos_z -= @s pos_z
+execute as @e[type=villager,tag=target_cell] at @s if score @s delivery_id = @a[tag=self,limit=1] player_id run function caw:game/warn/target_cell
 tag @s remove self
 
 # Show arrow based on location

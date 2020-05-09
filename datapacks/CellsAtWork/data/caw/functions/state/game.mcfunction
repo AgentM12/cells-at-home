@@ -5,6 +5,8 @@ function caw:game/respawn/tick
 function caw:map_events/conveyors/tick
 function caw:kill/banned_items
 
+execute as @e[type=item,tag=!item_pickup_time_set] at @s run function caw:update/item_pickup_delay
+
 ### PRE ###
 execute as @a[tag=player] at @s run function caw:limit/limit_items
 
@@ -15,10 +17,12 @@ execute as @e[type=minecraft:armor_stand,tag=anti_pathogen_barrier] at @s run fu
 # Damaged cells warn players.
 execute as @e[type=villager] at @s store result score @s pain_value run data get entity @s HurtByTimestamp
 execute as @e[type=villager,scores={pain_value=1..}] at @s run function caw:game/warn/cell_damaged
+execute as @e[type=villager,tag=infected_cell] at @s run function caw:game/warn/infected_cell
 
 # Player particles
 execute as @a[tag=red_cell] at @s run function caw:game/warn/red_cell
 execute as @a[tag=white_cell] at @s run function caw:game/warn/white_cell
+execute as @a[tag=pathogen] at @s run function caw:game/warn/pathogen
 
 # At all players spawn a cloud to be used when the player dies.
 execute as @a[tag=player] at @s run function caw:game/death_particles/tracker
@@ -27,6 +31,7 @@ execute as @a[nbt={ActiveEffects:[{Id:1b}]}] at @s run particle dust .75 .5 .25 
 
 # Store villager Age
 execute as @e[type=villager,tag=cell] at @s store result score @s age run data get entity @s Age
+execute as @e[type=villager,tag=cell,scores={age=-1}] at @s run data merge entity @s {ArmorItems:[{id:"minecraft:diamond_boots",Count:1b,tag:{Enchantments:[{id:"minecraft:protection",lvl:4}]}},{id:"minecraft:diamond_leggings",Count:1b,tag:{Enchantments:[{id:"minecraft:protection",lvl:4}]}},{id:"minecraft:diamond_chestplate",Count:1b,tag:{Enchantments:[{id:"minecraft:protection",lvl:4}]}},{id:"minecraft:diamond_helmet",Count:1b,tag:{Enchantments:[{id:"minecraft:protection",lvl:4}]}}],ArmorDropChances:[0f,0f,0f,0f]}
 
 # Slow down all cells (including infected)
 execute as @e[type=villager] at @s run effect give @s minecraft:slowness 1 1 true
