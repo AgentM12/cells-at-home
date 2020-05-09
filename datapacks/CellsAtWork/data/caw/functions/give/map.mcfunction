@@ -1,1 +1,0 @@
-give @s minecraft:filled_map{map:0,CAW_ID:"map"}

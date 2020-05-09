@@ -1,0 +1,7 @@
+{
+	"datapack-path": "../../../datapacks",
+	"severity": {
+		"call-to-function-not-found": 3,
+		"invalid-function-name": 3
+	}
+}

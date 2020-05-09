@@ -1,3 +1,5 @@
+execute as @a[distance=..1.5,tag=red_cell] at @s run effect give @s minecraft:regeneration 1 5 true
+
 particle minecraft:enchant ^-0.666 ^1 ^ 0 1 0 0.5 1 normal @a[tag=pathogen]
 particle minecraft:enchant ^0.666 ^1 ^ 0 1 0 0.5 1 normal @a[tag=pathogen]
 
