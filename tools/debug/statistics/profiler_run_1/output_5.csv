@@ -1,0 +1,14 @@
+PROFILER_ID;TIMESTAMP;Players;Spectators
+5;0;4;1
+
+TIME;Total;Adult;Child;Infected
+1;10;10;0;0
+2;10;10;0;0
+3;10;10;0;0
+4;10;10;0;0
+5;9;9;0;0
+6;8;8;0;0
+7;9;7;2;0
+
+GAME_DURATION;WINNER;REASON
+3124;2;1
