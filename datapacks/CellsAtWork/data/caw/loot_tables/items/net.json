@@ -27,7 +27,7 @@
             },
             {
               "function": "set_nbt",
-              "tag": "{CAW_ID:\"net\", CustomPotionEffects:[{Id:2,Amplifier:4,Duration:200,Ambient:1b}], CustomPotionColor:4768244}"
+              "tag": "{CAW_ID:\"net\", CustomPotionEffects:[{Id:2,Amplifier:4,Duration:200,Ambient:1b}], CustomPotionColor:8585471}"
             }
           ]
         }

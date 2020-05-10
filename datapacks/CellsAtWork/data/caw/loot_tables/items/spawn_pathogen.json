@@ -11,7 +11,7 @@
             {
               "function": "set_name",
               "name": {
-                "text": "Spawn Pathogen",
+                "text": "Infect Cells",
                 "italic": false
               }
             },
@@ -27,7 +27,7 @@
             },
             {
               "function": "set_nbt",
-              "tag": "{CAW_ID:\"spawn_pathogen\",Potion:\"poison\",HideFlags:127}"
+              "tag": "{CAW_ID:\"spawn_pathogen\",Potion:\"poison\",CustomPotionColor:65280,HideFlags:127}"
             }
           ]
         }
