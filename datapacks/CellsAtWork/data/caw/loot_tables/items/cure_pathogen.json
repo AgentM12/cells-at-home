@@ -11,7 +11,7 @@
             {
               "function": "set_name",
               "name": {
-                "text": "Infect Cells",
+                "text": "Cure Infected Cells",
                 "italic": false
               }
             },
@@ -19,7 +19,7 @@
               "function": "set_lore",
               "lore": [
                 {
-                  "text": "Throw at cells to infect them!",
+                  "text": "Throw at cells to cure them!",
                   "italic": false,
                   "color": "gray"
                 }
@@ -27,7 +27,7 @@
             },
             {
               "function": "set_nbt",
-              "tag": "{CAW_ID:\"spawn_pathogen\",Potion:\"poison\",CustomPotionColor:65280,HideFlags:127}"
+              "tag": "{CAW_ID:\"cure_pathogen\",Potion:\"luck\",CustomPotionColor:16777215,HideFlags:127}"
             }
           ]
         }

@@ -43,6 +43,10 @@ execute as @e[type=villager] at @s run effect give @s minecraft:slowness 1 1 tru
 execute as @e[type=villager,tag=cell] at @s store result score @s is_poisoned run effect clear @s minecraft:poison
 execute as @e[type=villager,tag=cell,scores={is_poisoned=1..}] at @s run function caw:game/infect/cell
 
+# Cure Cells
+execute as @e[type=villager] at @s store result score @s is_cured run effect clear @s minecraft:luck
+execute as @e[type=villager,tag=infected_cell,scores={is_cured=1..}] at @s run function caw:game/cure/cell
+
 # Player fixes
 gamemode adventure @a[gamemode=survival]
 execute as @a[gamemode=adventure,tag=!player] at @s run function caw:gamemode/spectator
@@ -57,6 +61,7 @@ effect give @a[tag=player,tag=!white_cell] minecraft:saturation 20 100 true
 effect give @a[tag=red_cell] minecraft:weakness 1 20 true
 effect clear @a[tag=pathogen] minecraft:slowness
 effect clear @a[tag=pathogen] minecraft:poison
+effect clear @a minecraft:luck
 
 
 ## Game Over Conditions ##
@@ -108,6 +113,7 @@ execute as @a[tag=white_cell] at @s run effect give @s hunger 1 3 true
 execute as @a[tag=pathogen] at @s store result score @s has_net_prev_t run clear @s minecraft:splash_potion{CAW_ID:"net"} 0
 execute as @a[tag=pathogen] at @s store result score @s has_poison_prev run clear @s minecraft:splash_potion{CAW_ID:"spawn_pathogen"} 0
 execute as @a at @s store result score @s has_coffee_prev run clear @s minecraft:splash_potion{CAW_ID:"coffee"} 0
+execute as @a[tag=white_cell] at @s store result score @s has_cure_prev run clear @s minecraft:splash_potion{CAW_ID:"cure_pathogen"} 0
 
 # Reset scores
 scoreboard players set @a use_potion 0

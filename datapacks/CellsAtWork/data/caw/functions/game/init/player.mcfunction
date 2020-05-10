@@ -11,9 +11,13 @@ scoreboard players set @s net_cooldown 0
 scoreboard players set @s has_coffee 0
 scoreboard players set @s has_oxygen 0
 scoreboard players set @s has_poison 0
+scoreboard players set @s has_poison_prev 0
 scoreboard players set @s has_net 0
 scoreboard players set @s has_net_prev_t 0
 scoreboard players set @s timeSinceDeath 12000
+scoreboard players set @s should_have_cure 0
+scoreboard players set @s has_cure 0
+scoreboard players set @s has_cure_prev 0
 
 tag @s remove should_have_poison
 
