@@ -19,6 +19,7 @@ scoreboard objectives add has_poison dummy [{"text":"Has Poison","color":"dark_g
 scoreboard objectives add has_map dummy [{"text":"Has a Map","color":"dark_green"}]
 scoreboard objectives add has_coffee dummy [{"text":"Has Coffee","color":"dark_green"}]
 scoreboard objectives add is_poisoned dummy [{"text":"Is Poisoned","color":"dark_green"}]
+scoreboard objectives add is_cured dummy [{"text":"Is Cured","color":"dark_green"}]
 
 scoreboard objectives add has_net_prev_t dummy [{"text":"Had a net last tick","color":"dark_green"}]
 scoreboard objectives add has_poison_prev dummy [{"text":"Had poison last tick","color":"dark_green"}]
