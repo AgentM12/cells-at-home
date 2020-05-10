@@ -62,6 +62,7 @@ effect give @a[tag=red_cell] minecraft:weakness 1 20 true
 effect clear @a[tag=pathogen] minecraft:slowness
 effect clear @a[tag=pathogen] minecraft:poison
 effect clear @a minecraft:luck
+execute as @a[tag=pathogen,nbt=!{ActiveEffects:[{Id:10b}]}] at @s if block ~ ~-1 ~ minecraft:honeycomb_block run effect give @s minecraft:regeneration 1 4 true
 
 
 ## Game Over Conditions ##
