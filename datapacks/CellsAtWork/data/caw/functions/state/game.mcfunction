@@ -113,6 +113,7 @@ execute as @a[tag=white_cell] at @s run effect give @s hunger 1 3 true
 execute as @a[tag=pathogen] at @s store result score @s has_net_prev_t run clear @s minecraft:splash_potion{CAW_ID:"net"} 0
 execute as @a[tag=pathogen] at @s store result score @s has_poison_prev run clear @s minecraft:splash_potion{CAW_ID:"spawn_pathogen"} 0
 execute as @a at @s store result score @s has_coffee_prev run clear @s minecraft:splash_potion{CAW_ID:"coffee"} 0
+execute as @a[tag=white_cell] at @s store result score @s has_cure_prev run clear @s minecraft:splash_potion{CAW_ID:"cure_pathogen"} 0
 
 # Reset scores
 scoreboard players set @a use_potion 0

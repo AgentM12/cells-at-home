@@ -5,6 +5,7 @@ execute store result score @s has_net run clear @s minecraft:splash_potion{CAW_I
 execute store result score @s has_poison run clear @s minecraft:splash_potion{CAW_ID:"spawn_pathogen"} 0
 #execute store result score @s has_map run clear @s minecraft:filled_map{CAW_ID:"map"} 0
 execute store result score @s has_coffee run clear @s minecraft:splash_potion{CAW_ID:"coffee"} 0
+execute store result score @s[tag=white_cell] has_cure run clear @s[tag=white_cell] minecraft:splash_potion{CAW_ID:"cure_pathogen"} 0
 
 execute if score @s[tag=red_cell] has_sandwich > @s sandwich_limit run function caw:limit/sandwich
 execute if score @s[tag=red_cell] has_oxygen > @s oxygen_limit run function caw:limit/oxygen
@@ -12,4 +13,5 @@ execute if score @s has_coffee matches 2.. run function caw:limit/coffee
 execute if score @s has_weapon matches 2.. run function caw:limit/weapon
 execute if score @s has_net matches 2.. run function caw:limit/net
 execute if score @s has_poison matches 2.. run function caw:limit/poison
+execute if score @s[tag=white_cell] has_cure > @s should_have_cure run function caw:limit/cure
 #execute if score @s has_map matches 2.. run function caw:limit/map

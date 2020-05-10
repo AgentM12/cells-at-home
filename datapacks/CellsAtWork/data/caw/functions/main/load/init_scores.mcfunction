@@ -24,6 +24,9 @@ scoreboard objectives add is_cured dummy [{"text":"Is Cured","color":"dark_green
 scoreboard objectives add has_net_prev_t dummy [{"text":"Had a net last tick","color":"dark_green"}]
 scoreboard objectives add has_poison_prev dummy [{"text":"Had poison last tick","color":"dark_green"}]
 scoreboard objectives add has_coffee_prev dummy [{"text":"Had a coffee last tick","color":"dark_green"}]
+scoreboard objectives add has_cure dummy [{"text":"Number of cures this cell has","color":"dark_green"}]
+scoreboard objectives add has_cure_prev dummy [{"text":"Number of cures this cell had last tick","color":"dark_green"}]
+scoreboard objectives add should_have_cure teamkill.dark_purple [{"text":"Number of cures this cell should have","color":"dark_green"}]
 
 # IDs
 scoreboard objectives add id dummy [{"text":"ID","color":"aqua"}]
