@@ -48,3 +48,6 @@ execute as @a[tag=player] at @s run function caw:game/delivery/update_delivery_c
 
 # Initialize targets
 function caw:main/load/setup_bossbars
+
+# Unpause game
+scoreboard players set $Paused gamestate 0

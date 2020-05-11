@@ -4,3 +4,7 @@ tp @a[tag=!spectator] @e[type=armor_stand,tag=lobby_marker,limit=1]
 execute as @e[type=armor_stand,tag=lobby_marker] at @s run spawnpoint @a
 
 execute as @a[tag=spectator] at @s run function caw:gamemode/unspectator
+
+# Unpause game
+scoreboard players set $Paused gamestate 0
+scoreboard players set $StartGame timer -1
