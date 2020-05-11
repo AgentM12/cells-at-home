@@ -5,4 +5,5 @@ tp @s @e[type=armor_stand,tag=respawn_lobby_marker,limit=1]
 tag @s add respawning
 
 # Give the player weakness
+effect clear @s
 effect give @s weakness 1000000 20 true

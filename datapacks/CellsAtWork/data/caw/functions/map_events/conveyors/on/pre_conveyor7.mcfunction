@@ -1,1 +1,1 @@
-setblock 260 68 -199 minecraft:honey_block
+fill 260 68 -199 260 68 -199 minecraft:honey_block replace minecraft:air
