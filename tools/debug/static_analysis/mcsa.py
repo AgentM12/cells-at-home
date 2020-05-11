@@ -11,8 +11,8 @@ ns_id = '(?:[a-z_][a-z0-9_]*:)[a-z0-9_.][a-z0-9_/.]*'
 
 dp_pattern = re.compile('.*?[{sp}]datapacks[{sp}][^{sp}]+[{sp}]data[{sp}]([a-z_][a-z0-9_]*)[{sp}]functions[{sp}](.*)\\.mcfunction'.format(sp=sp))
 valid_namespace_pattern = re.compile(ns_id)
-function_call_pattern = re.compile('^function (#?{})'.format(ns_id))
-schedule_function_call_pattern = re.compile('^schedule (?:function|clear) (#?{})'.format(ns_id))
+function_call_pattern = re.compile('(?:[^#].*? run |)function (#?{})'.format(ns_id))
+schedule_function_call_pattern = re.compile('(?:[^#].*? run |)schedule (?:function|clear) (#?{})'.format(ns_id))
 
 config_location = 'mcsa_config.json'
 
@@ -61,20 +61,20 @@ def validate_function_calls(funcs, func_paths, config):
     for p in func_paths:
         ln = 1
         with open(p, 'r') as f:
-            line = f.readline()
-            m = function_call_pattern.match(line)
-            m2 = schedule_function_call_pattern.match(line)
-            if m:
-                fc = m.group(1)
-                if fc not in funcs:
-                    pyprint('Function "{}" not found at {} in "{}"'.format(fc, ln, p), sv)
-                    bugs += 1
-            if m2:
-                fc = m2.group(1)
-                if fc not in funcs:
-                    pyprint('Function "{}" not found at {} in "{}"'.format(fc, ln, p), sv)
-                    bugs += 1
-            ln += 1
+            for line in f:
+                m = function_call_pattern.match(line)
+                m2 = schedule_function_call_pattern.match(line)
+                if m:
+                    fc = m.group(1)
+                    if fc not in funcs:
+                        pyprint('Function "{}" not found at {} in "{}"'.format(fc, ln, p), sv)
+                        bugs += 1
+                if m2:
+                    fc = m2.group(1)
+                    if fc not in funcs:
+                        pyprint('Function "{}" not found at {} in "{}"'.format(fc, ln, p), sv)
+                        bugs += 1
+                ln += 1
     return bugs
 
 def validate_function_names(funcs, config):
