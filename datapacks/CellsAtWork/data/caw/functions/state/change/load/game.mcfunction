@@ -7,6 +7,9 @@ scoreboard players reset * age
 scoreboard players set $Cells target_progress 0
 scoreboard players set $Pathogens target_progress 0
 
+# Set spawnpoint
+execute as @e[type=armor_stand,tag=respawn_lobby_marker,limit=1] at @s run spawnpoint @a[tag=player] ~ ~ ~
+
 tag @a remove respawning
 
 # kills
