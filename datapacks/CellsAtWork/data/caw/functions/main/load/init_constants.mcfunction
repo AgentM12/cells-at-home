@@ -21,6 +21,8 @@ execute unless score $GLOBAL_SETTING respawn_timer_s matches 0.. run scoreboard 
 execute unless score $GLOBAL_SETTING net_cooldown matches 0.. run scoreboard players set $GLOBAL_SETTING net_cooldown 600
 execute unless score $Start_Count cell_count matches 1.. run scoreboard players set $Start_Count cell_count 20
 
+execute unless score $GameStart timer matches -2147483648.. run scoreboard players set $GameStart timer -1
+
 # Deliveries
 execute unless score $GLOBAL_SETTING delivery_timer matches 0.. run scoreboard players set $GLOBAL_SETTING delivery_timer 120
 execute unless score $Delivery_Factor sandwich_limit matches 1.. run scoreboard players set $Delivery_Factor sandwich_limit 15
@@ -43,6 +45,7 @@ execute unless score $GLOBAL_SETTING split_rng_bound matches 1.. run scoreboard 
 ### Variables ###
 execute unless score $State gamestate matches -2147483648.. run scoreboard players set $State gamestate 0
 execute unless score $Change gamestate matches -2147483648.. run scoreboard players set $Change gamestate 0
+execute unless score $Paused gamestate matches -2147483648.. run scoreboard players set $Paused gamestate 0
 execute unless score $GLOBAL game_id matches -2147483648.. run scoreboard players set $GLOBAL game_id 0
 
 # Debug | Set to -1 to turn off, 1 to turn on.
