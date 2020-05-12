@@ -8,6 +8,7 @@ function caw:kill/banned_items
 execute as @e[type=item,tag=!item_pickup_time_set] at @s run function caw:update/item_pickup_delay
 
 ### PRE ###
+execute as @a[tag=white_cell] at @s if score @s should_have_cure matches 3.. run scoreboard players set @s should_have_cure 2
 execute as @a[tag=player] at @s run function caw:limit/limit_items
 
 execute as @a[tag=red_cell] at @s run function caw:game/target/check_alive
@@ -30,7 +31,7 @@ execute as @a[tag=player,scores={timeSinceDeath=0}] at @s run function caw:game/
 
 # Fix particles and effects
 execute as @a[nbt={ActiveEffects:[{Id:1b}]}] at @s run particle dust .75 .5 .25 1 ~ ~ ~ .5 1 .5 0 3 normal
-execute as @a[nbt={ActiveEffects:[{Id:11b}]}] at @s run effect give @s minecraft:jump_boost 1 128 true
+#execute as @a[nbt={ActiveEffects:[{Id:2b}]}] at @s run effect give @s minecraft:jump_boost 1 128 true
 
 # Store villager Age
 execute as @e[type=villager,tag=cell] at @s store result score @s age run data get entity @s Age
@@ -62,7 +63,7 @@ effect give @a[tag=red_cell] minecraft:weakness 1 20 true
 effect clear @a[tag=pathogen] minecraft:slowness
 effect clear @a[tag=pathogen] minecraft:poison
 effect clear @a minecraft:luck
-execute as @a[tag=pathogen,nbt=!{ActiveEffects:[{Id:10b}]}] at @s if block ~ ~-1 ~ minecraft:purple_concrete run effect give @s minecraft:regeneration 1 4 true
+execute as @a[tag=pathogen] at @s if block ~ ~-1 ~ minecraft:purple_concrete run effect give @s minecraft:regeneration 1 5 true
 
 
 ## Game Over Conditions ##

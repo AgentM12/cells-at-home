@@ -4,4 +4,3 @@ data merge entity @s {Age:-600s,ArmorItems:[{},{},{},{}]}
 scoreboard players operation @s nutrients -= $Required nutrients
 
 function caw:summon/cell_baby
-#function caw:summon/cell_baby

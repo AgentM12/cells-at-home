@@ -18,6 +18,6 @@ execute if score $Pathogens count matches 1001.. run tellraw @s [{"text":"","col
 execute unless score $State gamestate matches 0 run tellraw @s [{"text":"","color":"red"},{"text":"Unable to start game: It has already started!"}]
 
 scoreboard players set $CanStartGame count 0
-execute if score $State gamestate matches 0 if score $Players count matches 3..3000 if score $Red_Cells count matches 1..1000 if score $White_Cells count matches 1..1000 if score $Pathogens count matches 1..1000 run scoreboard players set $CanStartGame count 1
+execute if score $Paused gamestate matches 0 if score $State gamestate matches 0 if score $Players count matches 3..3000 if score $Red_Cells count matches 1..1000 if score $White_Cells count matches 1..1000 if score $Pathogens count matches 1..1000 run scoreboard players set $CanStartGame count 1
 execute if score $CanStartGame count matches 1 run function caw:game/init/pre_start
 execute if score $CanStartGame count matches 0 run playsound minecraft:entity.villager.no master @a ~ ~ ~ 1 1 0
