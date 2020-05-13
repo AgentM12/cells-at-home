@@ -15,11 +15,11 @@ scoreboard players set $Ten constant 10
 
 ### Initialize settings ###
 execute unless score $Cells_Minimum target_progress matches 0.. run scoreboard players set $Cells_Minimum target_progress 5
-execute unless score $Cells_Target target_progress matches 0.. run scoreboard players set $Cells_Target target_progress 40
-execute unless score $Pathogens_Target target_progress matches 0.. run scoreboard players set $Pathogens_Target target_progress 20
+execute unless score $Cells_Target target_progress matches 0.. run scoreboard players set $Cells_Target target_progress 30
+execute unless score $Pathogens_Target target_progress matches 0.. run scoreboard players set $Pathogens_Target target_progress 15
 execute unless score $GLOBAL_SETTING respawn_timer_s matches 0.. run scoreboard players set $GLOBAL_SETTING respawn_timer_s 10
 execute unless score $GLOBAL_SETTING net_cooldown matches 0.. run scoreboard players set $GLOBAL_SETTING net_cooldown 600
-execute unless score $Start_Count cell_count matches 1.. run scoreboard players set $Start_Count cell_count 20
+execute unless score $Start_Count cell_count matches 1.. run scoreboard players set $Start_Count cell_count 15
 
 execute unless score $GameStart timer matches -2147483648.. run scoreboard players set $GameStart timer -1
 
@@ -30,7 +30,7 @@ execute unless score $Delivery_Factor sandwich_limit matches 1.. run scoreboard 
 execute unless score $Exponential_Factor poison_count matches -2147483648.. run scoreboard players set $Exponential_Factor poison_count 4
 execute unless score $Linear_Factor poison_count matches -2147483648.. run scoreboard players set $Linear_Factor poison_count 3
 execute unless score $Constant_Factor poison_count matches -2147483648.. run scoreboard players set $Constant_Factor poison_count 3
-execute unless score $Minimum poison_count matches 1.. run scoreboard players set $Minimum poison_count 3
+execute unless score $Minimum poison_count matches 1.. run scoreboard players set $Minimum poison_count 2
 
 # Poisons
 execute unless score $Exponential_Factor poison_count matches -2147483648.. run scoreboard players set $Exponential_Factor delivery_count 5
@@ -40,7 +40,7 @@ execute unless score $Minimum delivery_count matches 1.. run scoreboard players 
 
 # Splitting
 execute unless score $Required nutrients matches 1.. run scoreboard players set $Required nutrients 2
-execute unless score $GLOBAL_SETTING split_rng_bound matches 1.. run scoreboard players set $GLOBAL_SETTING split_rng_bound 20
+execute unless score $GLOBAL_SETTING split_rng_bound matches 1.. run scoreboard players set $GLOBAL_SETTING split_rng_bound 25
 
 ### Variables ###
 execute unless score $State gamestate matches -2147483648.. run scoreboard players set $State gamestate 0
