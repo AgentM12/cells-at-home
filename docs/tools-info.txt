@@ -1,0 +1,16 @@
+The tools in the folder 'tools' are custom written python code by me (Melvin S.)
+
+- debug/static_analysis is used to find critical bugs in the minecraft function files such as calls to missing functions etc.
+
+- debug/statistics is used to extract statistics from the log files from minecraft to be analysed externally through graphing and comparing, analyzing which settings work best and how games play out in numbers.
+I included the graphs and the runs in this package to give an idea what it looks like. (can be found in the docs folder)
+
+Various external tools we used:
+- https://www.minecraft.net/en-us/ > The 'Game Engine' we used to build our game in.
+- https://www.sublimetext.com/ > Sublime text, a text editor with lots of useful functionality to edit function files better than in notepad.
+- https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-tools/2924345-1-13-1-command-syntax-highlighter-for-sublime-text > A command syntax highlighter. (I made some minor modifications to their tool to fix some small bugs as well.) Used in conjunction with sublime text.
+- https://donatstudios.com/PixelCircleGenerator > Generate circles or arcs, because minecraft is blocky.
+- https://docs.google.com/document/u/0/ | https://drive.google.com/drive/ > Google Docs and Google Drive, to keep track of documents and files used during development.
+- https://trello.com/b/KMTVtku7/the-game > The trello board we used to keep track of progress, todo's and such.
+- https://legacy.minecraftjson.com/ > Used to preview and edit books within the game more easily (for game manuals and settings)
+- https://www.curseforge.com/minecraft/mc-mods/schematica > A Creative Build tool used to more easily clone/copy/edit builds in Minecraft

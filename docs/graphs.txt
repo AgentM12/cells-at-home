@@ -1,0 +1,9 @@
+These graphs are ran using different settings and can not be directly compared without further knowledge.
+
+X axis is time in intervals of 10 seconds. (regardless of the graph, the first runs were performed with 20 second intervals, however this has already been reflected in the graphs, transformed to intervals of 10 seconds)
+Y axis is amount of cells. (the requirement to win or lose depends on the settings not represented in the graph)
+
+Each result uses different parameters. If you need more details use the .csv files located on the git repository. The title number matches the number of the ouput result, categorized by profiler run, each run is a different session so a different day, but could still mean different or similar settings used.
+(the numbers are also the order in which the games were ran, because discord failed to upload the first 3, those are now at the bottom, but those happened before everything else, Therefore graph result_1.png would link up with output1.csv, etc.)
+
+One observation is that the game length has increased, (due to games ending really quickly at first because of the high imbalance). A typical game lasts for about 15 minutes, but this has increased to 30 minutes in some cases, we reflected this change by reducing the amount of cells required to win as well as some other small tweaks in cell growth.
