@@ -7,6 +7,8 @@ If you choose to play the pathogen, your goal is to cause chaos, make the body s
 
 This is a 3+ player game and runs (tested) in Minecraft 1.15.2 and above (untested).
 
+[Trailer](https://youtu.be/3lglJozy6ec)
+
 ## Installation
 To install the map, simply clone the git repository into a new world folder under your saves. Run on LAN or a dedicated server, make sure to have the server properties set to `enable-commandblocks=true` and `function-permission-level=2` (2 or higher).
 
